@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
+
+    <div id="loader"></div>
+
         <div id="header">
             <a href="#"> 
                 <h1>WeHear</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="38" d="M192 448h128M384 208v32c0 70.4-57.6 128-128 128h0c-70.4 0-128-57.6-128-128v-32M256 368v80"/><path d="M256 64a63.68 63.68 0 00-64 64v111c0 35.2 29 65 64 65s64-29 64-65V128c0-36-28-64-64-64z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="38"/></svg>
             </a>
         </div>
-    </header>
 
     
     <main id="listen_tab">
@@ -91,7 +92,7 @@
         </div>
     </main>
 
-    <nav>
+    <nav id="nav">
             <a href="#" id="listen_link"> 
                 <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M261.56 101.28a8 8 0 00-11.06 0L66.4 277.15a8 8 0 00-2.47 5.79L63.9 448a32 32 0 0032 32H192a16 16 0 0016-16V328a8 8 0 018-8h80a8 8 0 018 8v136a16 16 0 0016 16h96.06a32 32 0 0032-32V282.94a8 8 0 00-2.47-5.79z"/><path d="M490.91 244.15l-74.8-71.56V64a16 16 0 00-16-16h-48a16 16 0 00-16 16v32l-57.92-55.38C272.77 35.14 264.71 32 256 32c-8.68 0-16.72 3.14-22.14 8.63l-212.7 203.5c-6.22 6-7 15.87-1.34 22.37A16 16 0 0043 267.56L250.5 69.28a8 8 0 0111.06 0l207.52 198.28a16 16 0 0022.59-.44c6.14-6.36 5.63-16.86-.76-22.97z"/></svg>
                 <p class="nav_labels">Home</p>
@@ -106,6 +107,8 @@
             </a>
     </nav>
 
-    <script src="../main.js"></script>
+
+
+    <script type="module" src="../main.js"></script>
 </body>
 </html>
