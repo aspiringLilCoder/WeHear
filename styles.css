@@ -47,13 +47,11 @@ body {
     #listen_tab {
         display: flex;
         justify-content: center;
-        display: none;
     }
 
     #listen {
         background-color: #3085fe;
-        margin-top: 50%;
-
+        margin: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -93,7 +91,8 @@ body {
 
 
     #settings_tab {
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     nav {
