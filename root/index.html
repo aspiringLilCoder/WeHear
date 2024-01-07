@@ -4,39 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeHear</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+    </style>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
-        <div id="header_left">
-            <a href="#" id="listen_link"> <h1>WeHear</h1> </a>
-        </div>
-        <div id="header_right">
-            <a href="#" id="settings_link">
-                <svg id="settings_icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3085fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                <p id="settings_label">Customize your alerts</p>
+        <div id="header">
+            <a href="#"> 
+                <h1>WeHear</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="38" d="M192 448h128M384 208v32c0 70.4-57.6 128-128 128h0c-70.4 0-128-57.6-128-128v-32M256 368v80"/><path d="M256 64a63.68 63.68 0 00-64 64v111c0 35.2 29 65 64 65s64-29 64-65V128c0-36-28-64-64-64z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="38"/></svg>
             </a>
         </div>
     </header>
 
     
     <main id="listen_tab">
-            <div id="listen_icon_container">
-                <!-- svg icon -->
+            <div id="listen">
+                <div id="listen_icon_container">
+                    <svg class="listen_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+    
+                    <!-- svg icon -->
+                </div>
+                <button id="listen_btn">Start Listening</button>
             </div>
-            <button id="listen_btn">Start Listening</button>
+    </main>
+
+    <main id="about_tab">
+        <div id="about">
+            <div>
+                <h2>About WeHear</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed elit quis ex malesuada auctor sed ut urna. Donec ac venenatis magna. Vivamus feugiat accumsan tellus.</p>
+            </div>
+
+            <div>
+                <h2>Our Mission</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed elit quis ex malesuada auctor sed ut urna. Donec ac venenatis magna. Vivamus feugiat accumsan tellus.</p>
+            </div>
+         
+            <div>
+                <h2>Key Features</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed elit quis ex malesuada auctor sed ut urna. Donec ac venenatis magna. Vivamus feugiat accumsan tellus.</p>
+            </div>
+           
+          
+        </div>
     </main>
     
 
     <main id="settings_tab">
-            <label for="alert_input">Listen for:</label>
-            <input type="text" id="alert_input" placeholder="Enter the sounds you want to be alerted of.">
-            <button id="add_sound_btn">Add</button>
+
+        <div id="add_sound">
+            <h2>What sounds do you want to be alerted of?</h2>
+            <div id="search">
+                <input list="sounds" id="alert_input" placeholder="Search Sound">
+                <datalist id="sounds">
+                    <option value="Fire Alarm">
+                    <option value="Door Bell">
+                    <option value="Baby Crying">
+                </datalist>  
+                <button id="add_sound_btn">Add</button>    
+            </div>
 
             <ul id="soundList">
+                <li>
+                    <p>Fire Alarm</p>
+                    <svg class="remove_btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </li>
+                <li>
+                    <p>Door Bell</p>
+                    <svg class="remove_btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </li>
+                <li>
+                    <p>Baby Crying</p>
+                    <svg class="remove_btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </li>
                 <!-- alert sounds -->
             </ul>
+        </div>
+
+        <hr />
+
+        <div id="custom_sound">
+            <h2>Add custom sounds:</h2>
+            <p>Coming soon...</p>
+        </div>
     </main>
+
+    <nav>
+            <a href="#" id="listen_link" class="selected"> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M261.56 101.28a8 8 0 00-11.06 0L66.4 277.15a8 8 0 00-2.47 5.79L63.9 448a32 32 0 0032 32H192a16 16 0 0016-16V328a8 8 0 018-8h80a8 8 0 018 8v136a16 16 0 0016 16h96.06a32 32 0 0032-32V282.94a8 8 0 00-2.47-5.79z"/><path d="M490.91 244.15l-74.8-71.56V64a16 16 0 00-16-16h-48a16 16 0 00-16 16v32l-57.92-55.38C272.77 35.14 264.71 32 256 32c-8.68 0-16.72 3.14-22.14 8.63l-212.7 203.5c-6.22 6-7 15.87-1.34 22.37A16 16 0 0043 267.56L250.5 69.28a8 8 0 0111.06 0l207.52 198.28a16 16 0 0022.59-.44c6.14-6.36 5.63-16.86-.76-22.97z"/></svg>
+                <p class="nav_labels">Home</p>
+            </a>
+            <a href="#" id="about_link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 56C145.72 56 56 145.72 56 256s89.72 200 200 200 200-89.72 200-200S366.28 56 256 56zm0 82a26 26 0 11-26 26 26 26 0 0126-26zm48 226h-88a16 16 0 010-32h28v-88h-16a16 16 0 010-32h32a16 16 0 0116 16v104h28a16 16 0 010 32z"/></svg>
+                <p  class="nav_labels">About</p> 
+            </a>
+            <a href="#" id="settings_link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="48"/><path d="M470.39 300l-.47-.38-31.56-24.75a16.11 16.11 0 01-6.1-13.33v-11.56a16 16 0 016.11-13.22L469.92 212l.47-.38a26.68 26.68 0 005.9-34.06l-42.71-73.9a1.59 1.59 0 01-.13-.22A26.86 26.86 0 00401 92.14l-.35.13-37.1 14.93a15.94 15.94 0 01-14.47-1.29q-4.92-3.1-10-5.86a15.94 15.94 0 01-8.19-11.82l-5.59-39.59-.12-.72A27.22 27.22 0 00298.76 26h-85.52a26.92 26.92 0 00-26.45 22.39l-.09.56-5.57 39.67a16 16 0 01-8.13 11.82 175.21 175.21 0 00-10 5.82 15.92 15.92 0 01-14.43 1.27l-37.13-15-.35-.14a26.87 26.87 0 00-32.48 11.34l-.13.22-42.77 73.95a26.71 26.71 0 005.9 34.1l.47.38 31.56 24.75a16.11 16.11 0 016.1 13.33v11.56a16 16 0 01-6.11 13.22L42.08 300l-.47.38a26.68 26.68 0 00-5.9 34.06l42.71 73.9a1.59 1.59 0 01.13.22 26.86 26.86 0 0032.45 11.3l.35-.13 37.07-14.93a15.94 15.94 0 0114.47 1.29q4.92 3.11 10 5.86a15.94 15.94 0 018.19 11.82l5.56 39.59.12.72A27.22 27.22 0 00213.24 486h85.52a26.92 26.92 0 0026.45-22.39l.09-.56 5.57-39.67a16 16 0 018.18-11.82c3.42-1.84 6.76-3.79 10-5.82a15.92 15.92 0 0114.43-1.27l37.13 14.95.35.14a26.85 26.85 0 0032.48-11.34 2.53 2.53 0 01.13-.22l42.71-73.89a26.7 26.7 0 00-5.89-34.11zm-134.48-40.24a80 80 0 11-83.66-83.67 80.21 80.21 0 0183.66 83.67z"/></svg>
+                <p class="nav_labels">Settings</p>
+            </a>
+    </nav>
 
     <script src="main.js"></script>
 </body>
