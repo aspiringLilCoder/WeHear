@@ -9,10 +9,10 @@
 <body>
     <header>
         <div id="header_left">
-            <h1>WeHear</h1>
+            <a href="#" id="listen_link"> <h1>WeHear</h1> </a>
         </div>
         <div id="header_right">
-            <a href="settings.html" id="settings_link">
+            <a href="#" id="settings_link">
                 <svg id="settings_icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3085fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                 <p id="settings_label">Customize your alerts</p>
             </a>
@@ -20,14 +20,24 @@
     </header>
 
     
-    <main>
-        <div id="listen_section">
+    <main id="listen_tab">
             <div id="listen_icon_container">
                 <!-- svg icon -->
             </div>
             <button id="listen_btn">Start Listening</button>
-        </div>
     </main>
     
+
+    <main id="settings_tab">
+            <label for="alert_input">Listen for:</label>
+            <input type="text" id="alert_input" placeholder="Enter the sounds you want to be alerted of.">
+            <button id="add_sound_btn">Add</button>
+
+            <ul id="soundList">
+                <!-- alert sounds -->
+            </ul>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
