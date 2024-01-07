@@ -26,11 +26,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const sounds = document.getElementById("sounds")
 
+    const notificationBtn = document.getElementById("enable");
+
     listenLink.addEventListener("click", () => selectTab(listenTab));
     aboutLink.addEventListener("click", () => selectTab(aboutTab));
     settingsLink.addEventListener("click", () => selectTab(settingsTab));
 
     listenButton.addEventListener("click", startListening);
+
+    notificationBtn.addEventListener("click", askNotificationPermission);
 
     const tabs = [listenTab, aboutTab, settingsTab];
     const navLinks = [listenLink, aboutLink, settingsLink];
@@ -45,6 +49,22 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     aboutTab.style.display = "none";
     settingsTab.style.display = "none";
+
+    //Turn on notifications
+    function askNotificationPermission() {
+        function handlePermission(permission) {
+          notificationBtn.style.display =
+            Notification.permission === "granted" ? "none" : "block";
+        }
+      
+        if (!("Notification" in window)) {
+          console.log("This browser does not support notifications.");
+        } else {
+          Notification.requestPermission().then((permission) => {
+            handlePermission(permission);
+          });
+        }
+      }
 
     // Tab navigation
     function selectTab(tab) {

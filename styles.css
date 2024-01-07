@@ -43,7 +43,7 @@ body {
     }
       
 
-    #header {
+    header {
         background-color: #3085fe;
         color: #8c8c8c;
         display: flex;
@@ -52,6 +52,20 @@ body {
         padding: 22px;
         position: sticky;
         top: 0;
+    }
+
+    #enable {
+        background-color: #fff;
+        width: 140px;
+        height: 30px;
+        border-radius: 30px;
+        border: none;
+        color: #3085fe;
+    }
+
+    #enable:active {
+        background-color: #f1f1f1;
+
     }
 
     #header h1 {
