@@ -203,12 +203,21 @@ document.addEventListener("DOMContentLoaded", async function () {
             const scriptNode = audioCtx.createScriptProcessor(16384, 1, 1);
 
             scriptNode.onaudioprocess = function (audioProcessingEvent) {
+
                 const inputBuffer = audioProcessingEvent.inputBuffer;
                 let inputData = inputBuffer.getChannelData(0);
 
                 // Classify the audio
                 const result = audioClassifier.classify(inputData);
                 const categories = result[0].classifications[0].categories;
+
+                
+                let categoriesArray = [categories[0].categoryName, categories[1].categoryName, categories[2].categoryName];
+                categoriesArray.forEach(category => {
+                    if(selectedSoundsArray.includes(category)) {
+                        new Notification(`${category} has been detected.`)
+                    }
+                });
 
                 // Display results
                 //    categories[0].categoryName 
