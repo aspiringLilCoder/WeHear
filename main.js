@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const notificationBtn = document.getElementById("enable");
 
+    const flashing = document.getElementById("flashing");
+    const closeMessage = document.getElementById("close_message");
+    const detectionMessage = document.getElementById("detection_message");
+
     listenLink.addEventListener("click", () => selectTab(listenTab));
     aboutLink.addEventListener("click", () => selectTab(aboutTab));
     settingsLink.addEventListener("click", () => selectTab(settingsTab));
@@ -36,10 +40,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     notificationBtn.addEventListener("click", askNotificationPermission);
 
+    closeMessage.addEventListener("click", () => {flashing.style.display = "none";});
+
     const tabs = [listenTab, aboutTab, settingsTab];
     const navLinks = [listenLink, aboutLink, settingsLink];
 
-    listenTab.style.display = "flex";
     navLinks[0].classList.add("selected");
 
 
@@ -150,7 +155,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     };
 
     createAudioClassifier();
- 
+
+    flashing.style.display = "none";
     loader.style.display = "none";
     listenTab.style.display = "flex";
     header.style.display = "flex";
@@ -216,6 +222,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 categoriesArray.forEach(category => {
                     if(selectedSoundsArray.includes(category)) {
                         new Notification(`${category} has been detected.`)
+                        detectionMessage.innerText = `${category} has been detected.`;
+                        flashing.style.display = "flex";
                     }
                 });
 
