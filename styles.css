@@ -200,6 +200,10 @@ body {
         width: 70%;
     }
 
+    #alert_input:focus {
+        outline: none;
+    }
+
     #search {
         display: flex;
         justify-content: space-between;
@@ -257,6 +261,10 @@ body {
 
     #about div h2 {
         margin-bottom: 10px;
+    }
+
+    .error {
+        box-shadow: 0px 0px 2px 1px #e74c3c;
     }
 
 /* } */
