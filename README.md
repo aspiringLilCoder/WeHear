@@ -13,4 +13,4 @@ We are addressing challenges faced by individuals with hearing difficulties, suc
 
 **Developer notes:** My "mobile app" is actually a website, and I initially did try to create a mobile app but realized there's not enough time to learn a whole new language, so I only had to rely on my web development skills that I already had. Thus, I decided to create a mobile web app. I plan to re-create this as a mobile app once I master React Native.
 
- [Check out my web app here!](https://github.com/aspiringLilCoder/WeHear/commits/main/)
+ [Check out my web app here!](https://aspiringlilcoder.github.io/WeHear/#)
